@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ModernStream Blog — Storytelling with Data. Visualization, dashboards, narrative design, and data journalism.">
+  <meta property="og:title" content="ModernStream Blog">
+  <meta property="og:description" content="The craft of making numbers meaningful.">
+  <meta property="og:type" content="website">
+  <title>ModernStream Blog — Storytelling with Data</title>
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon inline -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%235b6cff'/><polyline points='4,24 10,16 16,19 22,10 28,6' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+</head>
+<body>
+
+<!-- ====== HEADER ====== -->
+<header id="site-header">
+  <div class="container header-inner">
+
+    <a href="#" class="site-logo" onclick="navigateTo('')">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+          <polyline points="3,17 7,11 11,13 15,7 21,4"/>
+        </svg>
+      </div>
+      Modern<span>Stream</span>
+    </a>
+
+    <nav id="main-nav">
+      <a href="#" onclick="navigateTo('')">Home</a>
+      <a href="#archive" onclick="navigateTo('archive')">Articles</a>
+      <a href="#about" onclick="navigateTo('about')">About</a>
+      <a href="#contact" onclick="navigateTo('contact')">Contact</a>
+    </nav>
+
+    <div class="header-controls">
+      <button class="btn-icon" id="search-btn" aria-label="Search">🔍</button>
+      <button class="btn-icon" id="theme-btn" aria-label="Toggle theme" onclick="themeToggle()">🌙</button>
+      <button class="btn-icon menu-toggle" id="menu-toggle" aria-label="Menu">☰</button>
+    </div>
+
+  </div>
+</header>
+
+<!-- ====== SEARCH OVERLAY ====== -->
+<div class="search-overlay" id="search-overlay">
+  <div style="position:relative;width:100%;max-width:600px;padding:0 24px">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Search articles about data storytelling…">
+      <button class="btn-icon" id="search-close">✕</button>
+    </div>
+    <div id="search-results" style="background:var(--card-bg);border-radius:0 0 14px 14px;padding:0 16px;border:1px solid var(--border);border-top:none"></div>
+  </div>
+</div>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main-content" role="main">
+  <!-- Rendered by app.js -->
+  <div style="padding:80px 24px;text-align:center;color:var(--text2)">Loading…</div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer id="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="site-logo" onclick="navigateTo('')" style="font-size:1.15rem">
+          <div class="logo-icon" style="width:30px;height:30px">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+              <polyline points="3,17 7,11 11,13 15,7 21,4"/>
+            </svg>
+          </div>
+          Modern<span>Stream</span>
+        </a>
+        <p class="tagline">The craft of making numbers meaningful. Data storytelling, visualization & narrative design.</p>
+        <div class="social-row">
+          <a class="social-btn" href="https://twitter.com" target="_blank" aria-label="Twitter">🐦</a>
+          <a class="social-btn" href="https://linkedin.com" target="_blank" aria-label="LinkedIn">💼</a>
+          <a class="social-btn" href="https://github.com" target="_blank" aria-label="GitHub">🐙</a>
+          <a class="social-btn" href="#" aria-label="RSS">📡</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#" onclick="navigateTo('')">Home</a></li>
+          <li><a href="#archive" onclick="navigateTo('archive')">All Articles</a></li>
+          <li><a href="#about" onclick="navigateTo('about')">About</a></li>
+          <li><a href="#contact" onclick="navigateTo('contact')">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul class="footer-links">
+          <li><a href="#category/data-viz" onclick="navigateTo('category/data-viz')">Data Viz</a></li>
+          <li><a href="#category/dashboards" onclick="navigateTo('category/dashboards')">Dashboards</a></li>
+          <li><a href="#category/design" onclick="navigateTo('category/design')">Design</a></li>
+          <li><a href="#category/tools" onclick="navigateTo('category/tools')">Tools</a></li>
+          <li><a href="#category/scrollytelling" onclick="navigateTo('category/scrollytelling')">Scrollytelling</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 <a href="#">ModernStream Blog</a>. All rights reserved.</p>
+      <p>Built with ❤️ for data storytellers everywhere.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK TO TOP ====== -->
+<button id="back-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- Scripts -->
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
